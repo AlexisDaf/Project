@@ -9,7 +9,7 @@ tokenizer = AutoTokenizer.from_pretrained("gpt2")
 base_model = AutoModelForCausalLM.from_pretrained("gpt2")
 base_model.eval() 
 # Chargement de l'adaptateur LoRA
-adapter_path = "C:/Users/micha/OneDrive/Documents/lora2"  # Remplacer par le chemin vers l'adaptateur LoRA
+adapter_path = "C:/chemin/acces/modele/lora"  # Remplacer par le chemin vers l'adaptateur LoRA
 
 # Chargement du modèle LoRA
 config = PeftConfig.from_pretrained(adapter_path)
