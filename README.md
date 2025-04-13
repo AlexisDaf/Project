@@ -13,3 +13,8 @@ Notre projet se divise en 4 parties :
 - La troisième partie est la partie la plus importante du projet puisqu'elle correspond au fine-tuning de notre algorithme. En effet, nous allons pour cette partie utiliser LoRA pour le réaliser et obtenir un bon entraînement.
 
 - La quatrième partie sera une partie évaluation du modèle et la création de l'application de notre Chatbot.
+Pour lancer l'application, ouvrez un terminal dans votre éditeur de code et exécutez la commande suivante :
+
+```bash
+streamlit run "Quatrième partie.py"
+
