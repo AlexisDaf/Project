@@ -2,7 +2,7 @@
 
 Participant : Lououngou Michael, Da Fonseca Alexis, Bensalah Lockman, Abdelli Khalid
 
-## But : fine-tuner un algorithme de traitement de langage sur un modèle déjà pré-entrainé GPT2.
+## But : fine-tuner un algorithme de traitement de langage sur un modèle déjà pré-entrainé GPT2. ( Le modèle est disponible en téléchargement gpt2_lora_finetuned.zip )
 
 Notre projet se divise en 4 parties :
 
