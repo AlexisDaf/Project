@@ -41,12 +41,12 @@ if submitted:
     inputs = tokenizer(full_prompt, return_tensors="pt")
     ## Générer une réponse avec le modèle LoRA et GPT2, on prend les 50 meilleurs mots de la distribution avec une température de 0.8
     # et une probabilité cumulée(top_p) d'au moins 0.95
-    # et une longueur maximale de 50 tokens
+    # et une longueur maximale de 100 tokens
     with torch.no_grad():
         outputs = model.generate(**inputs,
                                  do_sample=True,
                                  temperature=0.8,
-                                 max_length=50,
+                                 max_length=100,
                                  top_p=0.95,
                                  top_k=50,
                                  num_return_sequences=1)
@@ -54,7 +54,7 @@ if submitted:
         outputs2 = base_model.generate(**inputs,
                                        do_sample=True,
                                        temperature=0.8,
-                                       max_length=50,
+                                       max_length=100,
                                        top_p=0.95,
                                        top_k=50,
                                        num_return_sequences=1)
@@ -65,14 +65,14 @@ if submitted:
     # Décodage de la réponse du modèle de base
     response_base = tokenizer.decode(outputs2[0], skip_special_tokens=True)
 
-    # Affichage stylisé avec Markdown pour introduire la section LoRA
+    # Affichage avec Markdown pour introduire la section LoRA
     st.markdown("### Réponse du modèle LoRA :")
     
-    # Encadré vert pour mettre en valeur la réponse principale (succès)
+    # Encadré vert pour la réponse du modèle fine-tuné
     st.success(response_lora)
 
     # Affichage Markdown pour la comparaison
     st.markdown("### Réponse du modèle de base (GPT2) :")
 
-    # Encadré bleu pour une information secondaire (réponse du modèle de base)
+    # Encadré bleu pour la réponse du modèle GPT-2
     st.info(response_base)
