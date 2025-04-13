@@ -41,12 +41,12 @@ if submitted:
     inputs = tokenizer(full_prompt, return_tensors="pt")
     ## Générer une réponse avec le modèle LoRA et GPT2, on prend les 50 meilleurs mots de la distribution avec une température de 0.8
     # et une probabilité cumulée(top_p) d'au moins 0.95
-    # et une longueur maximale de 100 tokens
+    # et une longueur maximale de 50 tokens
     with torch.no_grad():
         outputs = model.generate(**inputs,
                                  do_sample=True,
                                  temperature=0.8,
-                                 max_length=100,
+                                 max_length=50,
                                  top_p=0.95,
                                  top_k=50,
                                  num_return_sequences=1)
@@ -54,7 +54,7 @@ if submitted:
         outputs2 = base_model.generate(**inputs,
                                        do_sample=True,
                                        temperature=0.8,
-                                       max_length=100,
+                                       max_length=50,
                                        top_p=0.95,
                                        top_k=50,
                                        num_return_sequences=1)
