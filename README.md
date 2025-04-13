@@ -12,4 +12,4 @@ Notre projet se divise en 4 parties :
 
 - La troisième partie est la partie la plus importante du projet puisqu'elle correspond au fine-tuning de notre algorithme. En effet, nous allons pour cette partie utiliser LoRA pour le réaliser et obtenir un bon entraînement.
 
-- La quatrième partie sera juste une partie évaluation du modèle
+- La quatrième partie sera juste une partie évaluation du modèle et la création de l'application de notre Chatbot.
