@@ -16,5 +16,5 @@ Notre projet se divise en 4 parties :
 Pour lancer l'application, ouvrez un terminal dans votre éditeur de code et exécutez la commande suivante :
 
 ```bash
-streamlit run "Quatrième partie.py"
+streamlit run Quatrième partie.py
 
